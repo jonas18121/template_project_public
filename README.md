@@ -5,7 +5,7 @@
 1) Clonez le projet
 
 ```ps
-git clone https://github.com/jonas18121/template_project.git
+git clone https://github.com/jonas18121/template_project_public.git
 ```
 
 2) Renommez le nom du projet `template_project` par le nouveau nom de votre project exemple `new_project` partout ou on trouve le nom `template_project`
