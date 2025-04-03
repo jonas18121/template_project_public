@@ -42,10 +42,10 @@ Exemple pour Symfony 7.0 il faut :
 mkdir app
 ```
 
-8) Construire le projet avec `docker-build` qui représente `docker-compose build`
+8) Construire le projet avec `build` qui représente `docker-compose build`
 
 ```ps
-make docker-build
+make build
 ```
 
 9) Créez et démarrez les contenaires docker (représente `docker-compose up -d`)
@@ -71,7 +71,7 @@ make down
 1) La commande ci-dessous permet d'entrez dans le contenaire PHP pour être dans le répertoire `/var/www/app` du contenaire PHP
 
 ```ps
-make exec-cli-app
+make container-php
 ```
 
 2) Créez le projet Symfony à partir du répertoire `/var/www/app`

@@ -61,13 +61,6 @@ help:
 endif
 
 ##-----------------------------------------
-## PROJECT
-##-----------------------------------------
-
-install: ## Install project
-install: docker-build
-
-##-----------------------------------------
 ## DOCKER
 ##-----------------------------------------
 
@@ -76,6 +69,9 @@ start: ## start application containers
 
 stop: ## Stop application containers
 	make docker-stop
+
+build: ## Build and rebuild application containers
+	make docker-build
 
 run: ## run Docker in the background
 	make docker-run
@@ -120,13 +116,13 @@ docker-compose: docker-compose.yml.dist
 ## RUN & EXEC cli
 ##-----------------------------------------
 
-exec-cli-app: ## Go into app container to run command (ex: composer require, bin/console, etc)
+container-php: ## Go into app container to run command (ex: composer require, bin/console, etc)
 	$(EXEC_CONTAINER) $(APP_NAME)_www /bin/sh
 
-run-cli-app: ## Create temporary container of app
+container-php-2: ## Create temporary container of app
 	$(RUN_APP) /bin/sh
 
-run-cli-node: ## Create temporary container of node
+container-node: ## Create temporary container of node
 	$(RUN_NODE) /bin/sh
 
 ##-----------------------------------------
