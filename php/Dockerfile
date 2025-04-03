@@ -42,6 +42,13 @@ RUN docker-php-ext-install pdo pdo_mysql gd opcache intl zip calendar dom mbstri
 
 ## For PHP 8
 RUN pecl install apcu && docker-php-ext-enable apcu
+## If you have build issues because of pecl install apcu && docker-php-ext-enable apcu, comment it out and uncomment the 4 RUN commands below
+# Install wget and download apcu manually
+#RUN apt-get update -y && apt-get upgrade -y && apt-get install -y wget
+#RUN wget --no-check-certificate https://pecl.php.net/get/apcu-5.1.22.tgz
+#RUN pecl install --offline ./apcu-5.1.22.tgz
+# Enable the APCu extension
+#RUN docker-php-ext-enable apcu
 
 # COPY ./docker/php/php.ini /usr/local/etc/php/php.ini
 
