@@ -28,13 +28,16 @@ make generate-root-env
 git init
 ```
 
-6) Suivant la version de Symfony qu'on veut utiliser, il faudra surement modifier la version de PHP, de composer et de x-debug dans le fichier PHP/Dockerfile
+6) Suivant la version de Symfony qu'on veut utiliser, il faudra surement modifier la version de PHP, de composer et de x-debug dans le fichier `php/Dockerfile`
 
 Exemple pour Symfony 7.0 il faut :
 
 - PHP 8.2
 - Composer 2.7.1 
 - xdebug-3.2.0 
+
+Dans le répertoire `php/example` il y a des exemples pour différents types de version de PHP.
+Exemple : Copier le `Dockerfile` de `php/example/php8.2/Dockerfile` et le `vhosts.conf` de `php/example/php8.2/vhosts/vhosts.conf` pour les coller dans `php/Dockerfile` et `php/vhosts/vhosts.conf`
 
 7) Créez un dossier app à la racine du projet, s'il n'existe pas
 
